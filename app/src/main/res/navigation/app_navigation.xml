@@ -14,6 +14,11 @@
     <fragment android:id="@+id/detailFragment"
               android:name="com.konkidevs.deeplinksblog.DetailFragment"
               android:label="fragment_detail"
-              tools:layout="@layout/fragment_detail"/>
+              tools:layout="@layout/fragment_detail">
+        <argument android:name="id" app:argType="long"/>
+        <argument android:name="name" app:argType="string"/>
+        <deepLink android:id="@+id/deepLink" app:uri="https://blog.konkidevs.com/deeplink/{id}?name={name}"
+        />
+    </fragment>
 
 </navigation>

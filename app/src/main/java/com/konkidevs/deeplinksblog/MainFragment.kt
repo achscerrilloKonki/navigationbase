@@ -22,7 +22,10 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navigateButton.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_detailFragment)
+            val bundle = Bundle()
+            bundle.putLong("id", 1L)
+            bundle.putString("name", "Nombre desde la app")
+            findNavController().navigate(R.id.action_mainFragment_to_detailFragment, bundle)
         }
 
     }
